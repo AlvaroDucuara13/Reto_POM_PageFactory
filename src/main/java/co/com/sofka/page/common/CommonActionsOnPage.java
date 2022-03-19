@@ -1,4 +1,4 @@
-package co.com.sofka.common;
+package co.com.sofka.page.common;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
@@ -9,7 +9,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 public class CommonActionsOnPage {
     private static final Logger LOGGER = Logger.getLogger(CommonActionsOnPage.class);
-    private static final String WEBDRIVER_NULL_MESSAGE = "\nWARNING!\n\rThe Webdriver is NULL, please check it.\n";
+    private static final String WebdriverNullMessage = "\nWARNING!\n\rThe Webdriver is NULL, please check it.\n";
     private WebDriver driver;
 
     // Explicit Wait
@@ -27,7 +27,7 @@ public class CommonActionsOnPage {
     public CommonActionsOnPage(WebDriver driver, int seconds) {
         try {
             if (driver == null) {
-                LOGGER.warn(WEBDRIVER_NULL_MESSAGE);
+                LOGGER.warn(WebdriverNullMessage);
             }
             this.driver = driver;
             setWebDriverExplicitWait(driver, seconds);
@@ -83,7 +83,6 @@ public class CommonActionsOnPage {
     protected void doSubmit(WebElement webElement) {
         webElement.submit();
     }
-
 
     // getText
     protected String getText(WebElement webElement) {
