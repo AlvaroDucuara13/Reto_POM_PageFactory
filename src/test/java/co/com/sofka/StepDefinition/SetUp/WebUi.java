@@ -4,7 +4,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-//import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
+import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 import static com.google.common.base.StandardSystemProperty.USER_DIR;
 
 public class WebUi {
