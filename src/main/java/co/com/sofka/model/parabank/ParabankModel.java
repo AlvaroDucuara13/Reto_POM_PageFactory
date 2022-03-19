@@ -24,14 +24,16 @@ public class ParabankModel {
     private String ssnRegister="";
     private String usernameRegister;
     private String passwordRegister;
-    private String confirmPassRegister;
+    private String confirmPassRegister="";
+
+
 
     // LoginUser
     private String usernameLogin="";
     private String passwordLogin="";
 
     //Datos de usuario Random
-    Faker DatosRandom = new Faker(new Locale("es-MX"));
+    Faker DatosRandom = new Faker();
     String FirstName = DatosRandom.name().firstName();
     String LastName = DatosRandom.name().lastName();
     String CompleteName = FirstName +" "+ LastName;
@@ -43,6 +45,7 @@ public class ParabankModel {
     String NumberSSN = String.valueOf(DatosRandom.number().numberBetween(000001,999999));
     String UserName = FirstName + "_"+NumberSSN;
     String Password = LastName + NumberSSN;
+    String PasswordEr = LastName + City;
     String Email = FirstName + "_"  + City+ "@outlook.com";
     String Description = "Hola, deseo contactar con la gerencia de Parabank";
 
@@ -146,6 +149,10 @@ public class ParabankModel {
     public void setConfirmPassRegister() {
         this.confirmPassRegister = Password;
     }
+    public void setConfirmPassRegisterError() {
+        this.confirmPassRegister = PasswordEr;
+    }
+
 
     // Getters and SetterLoginUser
     public String getUsernameLogin() {

@@ -14,7 +14,7 @@ import static co.com.sofka.util.TimeSeconds.EIGHT_SECONDS;
 
 public class ParabankRegisterTest extends WebUi {
     private ParabankModel parabankModel;
-    private static final String MessageError = "PASSWORDS DO NOT MATCH";
+    private static final String MessageError = "Passwords did not match.";
     private static final String MessageConfirm = "Welcome ";
     private static final Logger LOGGER = Logger.getLogger(ParabankRegisterTest.class);
 

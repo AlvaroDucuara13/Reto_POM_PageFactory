@@ -170,5 +170,11 @@ public class RegisterParabankPage extends CommonActionsOnPage {
         return RegisterError;
     }
 
+    public String RegisterPasswordFoundError(){
+        String RegisterError;
+        RegisterError = getText(assertionMessagePassRepeated).trim();
+        return RegisterError;
+    }
+
 
 }

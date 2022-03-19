@@ -15,3 +15,7 @@ Feature: Registrarse en la pagina web Parabank
     When  el cliente registra sus datos personales, pero no ingresa el numero SSN
     Then  el cliente recibira un mensaje de advertencia por campo vacio en la seccion register
 
+  Scenario: El cliente ingresa los datos personales a registrar
+    When  el cliente registra sus datos personales, pero no confirma con exito el password
+    Then  el cliente recibira un mensaje de advertencia indicando que la confirmacion del password no es el mismo
+
